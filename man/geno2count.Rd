@@ -1,10 +1,12 @@
 \name{geno2count}
 \alias{geno2count}
-\title{Transforming genotype codes matrix to counts}
-\description{Genotype data format transformation: from genotype codes matrix to counts. The '0' codes will be removed.}
-\usage{geno2count(genotype)}
+\title{Transforming genotype codes matrix to genotype counts}
+\description{Genotype counts }
+\usage{
+geno2count(genotype)
+}
 \arguments{
-  \item{genotype}{ Genotype codes matrix}
+  \item{genotype}{ Matrix}
 }
 \value{
 Data frame of genotype counts with 3 columns: indid, snpid, and count

@@ -61,7 +61,7 @@ jth<- jth + 1
 	sco<- sapply(ncomptest, function(k) cor(yp, x%*%fit$coefficients[, , k]))
 	permscore<- abs(sco)
 	#permscore<- sco*sqrt( (length(yp)-2)/(1-sco^2) ) #t-distribution with df of n-2.
-	counts<- counts + (testscore <= permscore)
+	counts<- counts + (permscore >= testscore)
 	}#while
 	permpvalue<- (1+ counts)/(1 + jth)
 }#if

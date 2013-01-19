@@ -13,18 +13,18 @@ LASSO(x, y, family = c("gaussian", "binomial", "poisson", "multinomial", "cox"),
   \item{x}{ Genotype matrix}
   \item{y}{ Phenotype vector}
   \item{family}{ Family: gaussian, binomial, poisson, multinomial, and cox}
-  \item{alpha}{ alpha = 1 for LASSO, see R package glmnet}
+  \item{alpha}{ alpha = 1 for LASSO, see glmnet}
   \item{nlambda}{ see glmnet}
   \item{lambda.min.ratio}{ see glmnet}
   \item{standardize}{ see glmnet}
   \item{size.max}{ Maximum number of variants included}
   \item{a}{ Penalty parameter for information criterion, a=2 for AIC.}
   \item{npermutation}{ Number of permutation, if less than 1, the permutation will not be run.}
-  \item{npermutation.max}{ Maximum permutation, if missing, equal to npermutation.}
-  \item{min.nonsignificant.counts}{ Minimum nonsignificant counts, if missing, equal to 10.}
+  \item{npermutation.max}{ Maximum permutation}
+  \item{min.nonsignificant.counts}{ Minimum nonsignificant counts}
 }
 \details{
-Use glmnet package to implement LASSO and an information criterion, AIC, BIC, or GIC, to select the best subset of variants.
+Use glmnet package to implement LASSO and an information criterion (AIC, BIC, or GIC) to select a set of variants.
 }
 \value{
 \item{nonsignificant.counts }{Counts of permuted data that have a higher score than unpermuted data.}
@@ -33,9 +33,6 @@ Use glmnet package to implement LASSO and an information criterion, AIC, BIC, or
 \item{vs }{The selected variants}
 \item{total.permutation }{Total permutation}
 \item{family }{Family}
-}
-\references{
-C. Xu, M. Ladouceur, Z. Dastani, J. B. Richards, A. Ciampi, C. M.T. Greenwood (2012), Multiple regression methods show great potential for rare variant association tests, PLoSONE.
 }
 \author{C. Xu}
 \seealso{

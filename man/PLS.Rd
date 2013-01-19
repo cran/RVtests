@@ -12,8 +12,8 @@ PLS(x, y, scale = FALSE, ncomp, varpercent, npermutation = 100, npermutation.max
   \item{ncomp}{ Number of components, which could be a vector containing a set of numbers.}
   \item{varpercent}{ Explained variance percentage}
   \item{npermutation}{ Number of permutation, if less than 1, the permutation will not be run.}
-  \item{npermutation.max}{ Maximum permutation, if missing, equal to npermutation.}
-  \item{min.nonsignificant.counts}{ Minimum nonsignificant counts, if missing, equal to 10.}
+  \item{npermutation.max}{ Maximum permutation}
+  \item{min.nonsignificant.counts}{ Minimum nonsignificant counts}
 }
 \value{
 \item{score }{Correlation between y and y_est}
@@ -22,9 +22,6 @@ PLS(x, y, scale = FALSE, ncomp, varpercent, npermutation = 100, npermutation.max
 \item{pvalue.nominal }{Theoretical pvalue, not available now.}
 \item{total.permutation }{Total permutation}
 \item{ncomp.varp }{Number of components required for specified variance percentage}
-}
-\references{
-C. Xu, M. Ladouceur, Z. Dastani, J. B. Richards, A. Ciampi, C. M.T. Greenwood (2012), Multiple regression methods show great potential for rare variant association tests, PLoSONE.
 }
 \author{C. Xu}
 \seealso{

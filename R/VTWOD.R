@@ -264,6 +264,11 @@ PermLoop <- function(npermutation) {
 }
 ############################################################
 
+#P-values
+pval <- function(permwins){ (permwins+1)/(npermutation+1) }
+
+#################################################################
+
 ####################################
 # Function Calls start here
 ##################################
@@ -276,8 +281,6 @@ pwpm<- PermLoop(npermutation)
 pw <- pwpm$permresult
 totalpm<- pwpm$pm
 pw.df <- as.data.frame(t(apply(pw, 2, sum))) 
-#P-values
-pval<- (1 + pw.df)/(1 + totalpm)
 
 #cat("counts where permuted statistics are larger than unpermuted data\n")
 #print(pw.df)
@@ -287,6 +290,6 @@ pval<- (1 + pw.df)/(1 + totalpm)
 #options(width = 500)
 #print(pval(pw.df), max.levels = NULL, width = 500)
 
-list(score = unpermutedScores, nonsignificant.counts = pw.df, pvalue.empirical = pval, pvalue.nominal = NA, total.permutation = totalpm)
+list(score = unpermutedScores, nonsignificant.counts = pw.df, pvalue.empirical = pval(pw.df), pvalue.nominal = NA, total.permutation = totalpm)
 }
 
