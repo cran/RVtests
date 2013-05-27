@@ -3,7 +3,8 @@
 \title{VT and WOD for RV Tests}
 \description{Include methods: T1, T5, WE, VT, and WOD.}
 \usage{
-VTWOD(x, y, polyphen.weight, flipPhenotype = 0, npermutation = 1000, npermutation.max, min.nonsignificant.counts)
+VTWOD(x, y, polyphen.weight, flipPhenotype = 0, 
+	npermutation = 1000, npermutation.max, min.nonsignificant.counts)
 }
 \arguments{
  \item{x}{ Genotype matrix}
@@ -22,12 +23,14 @@ VTWOD(x, y, polyphen.weight, flipPhenotype = 0, npermutation = 1000, npermutatio
 \item{total.permutation }{Total permutation}
 }
 \references{
+Xu C, Ladouceur M, Dastani Z, Richards JB, Ciampi A, Greenwood CMT. (2012) Multiple Regression Methods Show Great Potential for Rare Variant Association Tests. PLoS ONE 7(8): e41694. doi:10.1371/journal.pone.0041694
+
 Ladouceur M, Dastani Z, Aulchenko YS, Greenwood CM, Richards JB (2012) The empirical power of rare variant association methods: Results from sanger sequencing in 1,998 individuals. PloS Genetics 8: e1002496.
 
 Price AL, Kryukov GV, de Bakker PI, Purcell SM, Staples J, et al. (2010) Pooled association tests for rare variants in exon-resequencing studies. Am J Hum Genet 86: 832 - 838.
 }
 
-\author{ C. Xu}
+\author{ C. Xu, Celia Greenwood}
 
 \note{
 This R implementation by Adam Kiezun, based on reference implementation in C by Alkes Price.

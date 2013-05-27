@@ -1,8 +1,8 @@
 Package: RVtests
 Type: Package
 Title: Rare Variant Tests
-Version: 1.1
-Date: 2013-01-19
+Version: 1.2
+Date: 2013-05-27
 Author: C. Xu, and C. M. Greenwood
 Maintainer: C. Xu <changjiang.xu@mail.mcgill.ca>
 Depends: R (>= 2.12.1), glmnet, spls, pls
@@ -10,6 +10,7 @@ Description: Use multiple regression methods to test rare variants
         association with disease traits.
 License: GPL (>= 2)
 LazyLoad: yes
-Packaged: 2013-01-20 16:09:46 UTC; changjiang.xu
+Packaged: 2013-05-28 03:49:34 UTC; changjiang.xu
+NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-01-20 17:37:53
+Date/Publication: 2013-05-28 07:40:45

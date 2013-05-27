@@ -143,6 +143,6 @@ jth<- jth + 1
 	permpvalue<- (1+ counts)/(1 + jth)
 }#if
 
-list(nonsignificant.counts = counts, pvalue.empirical = permpvalue, pvalue.nominal = testpvalue, vs = testvs, total.permutation = jth, family = family)
+list(nonsignificant.counts = counts, pvalue.empirical = permpvalue, pvalue.nominal = NA, vs = testvs, total.permutation = jth, family = family)
 }
 

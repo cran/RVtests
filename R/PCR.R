@@ -1,5 +1,6 @@
 PCR <-
-function(x, y, scale = FALSE, ncomp, varpercent, npermutation = 100, npermutation.max, min.nonsignificant.counts)
+function(x, y, scale = FALSE, ncomp, varpercent, 
+	npermutation = 100, npermutation.max, min.nonsignificant.counts)
 {
 #x=UDV': svd(x)
 #varpercent = 0.80

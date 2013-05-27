@@ -1,5 +1,6 @@
 VTWOD <-
-function(x, y, polyphen.weight, flipPhenotype = 0, npermutation = 1000, npermutation.max, min.nonsignificant.counts)
+function(x, y, polyphen.weight, flipPhenotype = 0, 
+	npermutation = 1000, npermutation.max, min.nonsignificant.counts)
 {   
 #####################################################
 # This script implements the VT test for pooled association of rare variants with a phenotype.

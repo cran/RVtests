@@ -10,7 +10,7 @@ LASSO(x, y, family = c("gaussian", "binomial", "poisson", "multinomial", "cox"),
 	size.max, a = 2, npermutation = 0, npermutation.max, min.nonsignificant.counts)
 }
 \arguments{
-  \item{x}{ Genotype matrix}
+  \item{x}{ Genotype matrix, each row as an individual and each column as a snp}
   \item{y}{ Phenotype vector}
   \item{family}{ Family: gaussian, binomial, poisson, multinomial, and cox}
   \item{alpha}{ alpha = 1 for LASSO, see glmnet}
@@ -29,10 +29,13 @@ Use glmnet package to implement LASSO and an information criterion (AIC, BIC, or
 \value{
 \item{nonsignificant.counts }{Counts of permuted data that have a higher score than unpermuted data.}
 \item{pvalue.empirical }{Empirical pvalue via permutation}
-\item{pvalue.nominal }{Theoretical pvalue for the selected variants}
+\item{pvalue.nominal }{Not availabe}
 \item{vs }{The selected variants}
 \item{total.permutation }{Total permutation}
 \item{family }{Family}
+}
+\references{
+Xu C, Ladouceur M, Dastani Z, Richards JB, Ciampi A, Greenwood CMT. (2012) Multiple Regression Methods Show Great Potential for Rare Variant Association Tests. PLoS ONE 7(8): e41694. doi:10.1371/journal.pone.0041694
 }
 \author{C. Xu}
 \seealso{

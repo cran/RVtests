@@ -8,8 +8,8 @@ Transform genotype counts data format to genotype codes format.
 count2geno(cgeno, indid)
 }
 \arguments{
-  \item{cgeno}{ A matrix with 3 columns: indid, snpid, and count}
-  \item{indid}{ Individual ID, including indid in cgeno}
+  \item{cgeno}{ A matrix or data frame with 3 columns: indid (individual IDs), snpid (SNP IDs), and count}
+  \item{indid}{ Individuals ID, including indid in cgeno}
 }
 \value{
   A matrix of genotypes 

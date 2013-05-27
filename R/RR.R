@@ -1,6 +1,6 @@
 RR <-
 function(x, y, z = NULL, scale = FALSE, weights = 1, lambda = 1, 
-		npermutation = 1000, npermutation.max, min.nonsignificant.counts = 0.1*npermutation)
+		npermutation = 1000, npermutation.max, min.nonsignificant.counts = 100)
 {
 #RR: ridge regression
 #The adaptive permutation is implemented by blocks
@@ -17,8 +17,13 @@ if (!is.null(z)) z<- scale(z, scale = scale)
 if (missing(npermutation.max)) npermutation.max<- npermutation
 
 #x=UDV': svd(x)
+#svd has a bug if not use LINPACK!
 UDV<- function(x){
-	a<- svd(x)
+	#a<- svd(x)
+	useLINPACK = TRUE #but first try LAPACK.
+	try({a<- svd(x); useLINPACK=FALSE}, silent = FALSE)
+	if(useLINPACK) {a<- svd(x, LINPACK=TRUE); message("Note: the error due to LAPACK is disappeared using LINPACK.")}
+
 	d<- a$d
 	indx<- (abs(d) > 1e-8)  #remove zero eigenvalues.
 	list(u=a$u[,indx, drop=FALSE], d=d[indx], v=a$v[,indx, drop=FALSE])

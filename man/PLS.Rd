@@ -3,7 +3,8 @@
 \title{Partial Least Squares Regression for RV tests}
 \description{Use PLS components for testing rare variants association with disease traits.}
 \usage{
-PLS(x, y, scale = FALSE, ncomp, varpercent, npermutation = 100, npermutation.max, min.nonsignificant.counts)
+PLS(x, y, scale = FALSE, ncomp, varpercent, 
+	npermutation = 100, npermutation.max, min.nonsignificant.counts)
 }
 \arguments{
   \item{x}{ Genotype matrix}
@@ -22,6 +23,9 @@ PLS(x, y, scale = FALSE, ncomp, varpercent, npermutation = 100, npermutation.max
 \item{pvalue.nominal }{Theoretical pvalue, not available now.}
 \item{total.permutation }{Total permutation}
 \item{ncomp.varp }{Number of components required for specified variance percentage}
+}
+\references{
+Xu C, Ladouceur M, Dastani Z, Richards JB, Ciampi A, Greenwood CMT. (2012) Multiple Regression Methods Show Great Potential for Rare Variant Association Tests. PLoS ONE 7(8): e41694. doi:10.1371/journal.pone.0041694
 }
 \author{C. Xu}
 \seealso{

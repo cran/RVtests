@@ -1,6 +1,10 @@
-geno2count <-
-function(genotype)
+geno2count <- function(genotype)
 {
+if (!is.matrix(genotype)) {
+	rownm<- rownames(genotype)
+	genotype<- as.matrix(genotype)
+	rownames(genotype)<- rownm
+	}
 indid<- NULL
 snpid<- NULL
 count<- NULL

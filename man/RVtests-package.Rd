@@ -10,8 +10,8 @@ Use multiple regression methods to test rare variants association with disease t
 \tabular{ll}{
 Package: \tab RVtests\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2013-01-19\cr
+Version: \tab 1.2\cr
+Date: \tab 2013-05-27\cr
 License: \tab GLP 2.0 or greater\cr
 LazyLoad: \tab yes\cr
 }
@@ -21,6 +21,9 @@ An overview of how to use the package, including the most important functions
 C. Xu,
 C. M. Greenwood,
 Maintainer: <changjiang.xu@mail.mcgill.ca>
+}
+\references{
+Xu C, Ladouceur M, Dastani Z, Richards JB, Ciampi A, Greenwood CMT. (2012) Multiple Regression Methods Show Great Potential for Rare Variant Association Tests. PLoS ONE 7(8): e41694. doi:10.1371/journal.pone.0041694
 }
 \examples{
 data(sample.cgeno)

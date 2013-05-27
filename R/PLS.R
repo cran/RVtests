@@ -1,5 +1,6 @@
 PLS <-
-function(x, y, scale = FALSE, ncomp, varpercent, npermutation = 100, npermutation.max, min.nonsignificant.counts)
+function(x, y, scale = FALSE, ncomp, varpercent, 
+	npermutation = 100, npermutation.max, min.nonsignificant.counts)
 {
 #varpercent = 0.80
 #always centralizing x and y
